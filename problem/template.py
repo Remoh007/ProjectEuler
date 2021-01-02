@@ -1,4 +1,5 @@
 import timeit
+import __init__
 
 
 def solution():

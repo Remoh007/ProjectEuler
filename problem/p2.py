@@ -1,8 +1,6 @@
 import timeit
-try:
-    from modules.fibonacci import *
-except ModuleNotFoundError:
-    from problem.modules.fibonacci import *
+import __init__
+from modules.fibonacci import *
 
 
 def solution():

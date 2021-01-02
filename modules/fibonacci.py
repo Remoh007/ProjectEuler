@@ -49,6 +49,8 @@ class fibonacci:
         """
         The function to calculate a fibonacci number.
 
+        It is using the Moivre-Binet formula.
+
         Parameters:
             n (int): Index of the fibonacci number
 
