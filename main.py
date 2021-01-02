@@ -15,9 +15,13 @@ def main():
             # Load problem and run the solution
             p = import_module("problem.p{}".format(problem))
             print("Running solution for problem #{}".format(problem))
+
+            result = p.solution()
+            print("Solution: {}".format(result))
             runtime = timeit.timeit(p.solution, number=1)
-            print("Runtime: {} milliseconds".format(runtime*1000))
-        except ModuleNotFoundError:
+            print("Runtime: {} seconds".format(runtime))
+        except ModuleNotFoundError as e:
+            print(e)
             # Show error message if there is no script for the problem
             print("There is no solution for problem {}".format(problem))
     except ValueError:  # The input was not an integer

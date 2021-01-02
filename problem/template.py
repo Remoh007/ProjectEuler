@@ -7,5 +7,8 @@ def solution():
 
 
 if __name__ == '__main__':
+    result = solution()
+    print("Solution: {}".format(result))
+
     runtime = timeit.timeit(solution, number=1)
-    print("Runtime: {} milliseconds".format(runtime*1000))
+    print("Runtime: {} seconds".format(runtime))

@@ -13,8 +13,7 @@ def solution():
         if i % 3 == 0 or i % 5 == 0:
             multiplies.append(i)
     # Calculating the sum of a list
-    result = sum(multiplies)
-    print("The sum of all multiplies of 3 or 5 below 1000 is {}".format(result))
+    return sum(multiplies)
 
 
 def solution_1():
@@ -24,10 +23,12 @@ def solution_1():
     Source: https://projecteuler.net/problem=1
     Same logic as before but this uses python's list comprehension.
     """
-    result = sum([x for x in range(1000) if x % 3 == 0 or x % 5 == 0])
-    print("The sum of all multiplies of 3 or 5 below 1000 is {}".format(result))
+    return sum([x for x in range(1000) if x % 3 == 0 or x % 5 == 0])
 
 
 if __name__ == '__main__':
+    result = solution()
+    print("The sum of all multiplies of 3 or 5 below 1000 is {}".format(result))
+
     runtime = timeit.timeit(solution, number=1)
-    print("Runtime: {} milliseconds".format(runtime*1000))
+    print("Runtime: {} seconds".format(runtime))
