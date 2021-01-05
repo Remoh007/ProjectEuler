@@ -3,6 +3,7 @@ import timeit
 import __init__
 from problem.p1 import solution as solution_1
 from problem.p2 import solution as solution_2
+from problem.p3 import solution as solution_3
 
 
 class TestProblemSolutions(unittest.TestCase):
@@ -16,6 +17,10 @@ class TestProblemSolutions(unittest.TestCase):
         """Testing the solution for problem #2"""
         self.assertEqual(solution_2(), 4613732)
 
+    def test_problem_3(self):
+        """Testing the solution for problem #3"""
+        self.assertEqual(solution_3(), 6857)
+
 
 class TestProblemRuntimes(unittest.TestCase):
     """Tests for the runtime of each solution"""
@@ -28,6 +33,11 @@ class TestProblemRuntimes(unittest.TestCase):
     def test_runtime_problem_2(self):
         """Testing the runtime of problem #2"""
         runtime = timeit.timeit(solution_2, number=1)
+        self.assertLessEqual(runtime, 0.01)
+
+    def test_runtime_problem_3(self):
+        """Testing the runtime of problem #3"""
+        runtime = timeit.timeit(solution_3, number=1)
         self.assertLessEqual(runtime, 0.01)
 
 
